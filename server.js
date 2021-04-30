@@ -109,7 +109,7 @@ function main() {
 
   // json serverを起動する
   server.use(router)
-  server.listen(55555, function () {
+  server.listen(80, function () {
     console.log('JSON Server is running')
   })
 }
