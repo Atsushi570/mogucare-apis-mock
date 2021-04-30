@@ -1,0 +1,32 @@
+@resource = images
+@host = localhost
+@port = 55555
+@id = 1
+@relationType = 1
+@relationId = 1
+@queryStrings = kindergarten-id=kinder1&relation-type=1
+
+
+### データの追加
+
+POST http://{{host}}:{{port}}/{{resource}}?relation-type={{relationType}}&relation-id={{relationId}} HTTP/1.1
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="text"
+
+title
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="sample.png"
+Content-Type: image/png
+
+< ./sample.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
+### クエリパラメータを使った特定データ取得の取得
+
+GET http://{{host}}:{{port}}/{{resource}}/search?{{queryStrings}} HTTP/1.1
+
+### 特定idのデータを削除
+
+DELETE  http://{{host}}:{{port}}/{{resource}}/{{id}} HTTP/1.1

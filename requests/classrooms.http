@@ -1,0 +1,39 @@
+@resource = classrooms
+@host = localhost
+@port = 55555
+@id = class001
+@queryStrings = kindergarten-id=kinder1
+
+### データの追加
+
+POST http://{{host}}:{{port}}/{{resource}}/ HTTP/1.1
+content-type: application/json
+
+{
+  "name": "sample"
+}
+
+### 全データ取得
+
+GET http://{{host}}:{{port}}/{{resource}}/ HTTP/1.1
+
+### 特定idのデータ取得
+
+GET http://{{host}}:{{port}}/{{resource}}/{{id}} HTTP/1.1
+
+### クエリパラメータを使った特定データ取得の取得
+
+GET http://{{host}}:{{port}}/{{resource}}?{{queryStrings}} HTTP/1.1
+
+### 特定idのデータを変更
+
+PUT http://{{host}}:{{port}}/{{resource}}/{{id}} HTTP/1.1
+content-type: application/json
+
+{
+  "changed": "changed"
+}
+
+### 特定idのデータを削除
+
+DELETE  http://{{host}}:{{port}}/{{resource}}/{{id}} HTTP/1.1

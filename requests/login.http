@@ -1,0 +1,24 @@
+@resource = auth/login
+@host = localhost
+@port = 55555
+
+
+### moguIdによるログインの実行
+
+POST http://{{host}}:{{port}}/{{resource}}/ HTTP/1.1
+content-type: application/json
+
+{
+  "moguId": "admin",
+  "password": "passwordpassword"
+}
+
+### emailによるログインの実行
+
+POST http://{{host}}:{{port}}/{{resource}}/ HTTP/1.1
+content-type: application/json
+
+{
+  "email": "test@example.com",
+  "password": "passwordpassword"
+}

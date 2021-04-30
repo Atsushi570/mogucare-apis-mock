@@ -1,0 +1,32 @@
+@resource = health
+@host = localhost
+@port = 55555
+@id = weight001
+@queryStrings = kindergarten-id=kinder1
+@item = weights
+
+### データの追加
+
+POST http://{{host}}:{{port}}/{{resource}}?item={{item}} HTTP/1.1
+content-type: application/json
+
+{
+  "name": "sample"
+}
+
+### クエリパラメータを使った特定データ取得の取得
+
+GET http://{{host}}:{{port}}/{{resource}}?{{queryStrings}}&item={{item}} HTTP/1.1
+
+### 特定idのデータを変更
+
+PUT http://{{host}}:{{port}}/{{resource}}?id={{id}}&item={{item}} HTTP/1.1
+content-type: application/json
+
+{
+  "changed": "changed"
+}
+
+### 特定idのデータを削除
+
+DELETE  http://{{host}}:{{port}}/{{resource}}?id={{id}}&item={{item}} HTTP/1.1
