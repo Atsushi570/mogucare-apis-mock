@@ -11,7 +11,7 @@ const kindergartens = [
     'webUrl': 'https://site.xxxx.com',
     'fbUrl': 'https://facebook.xxxx.com',
     'planCd': 1,
-    'image': 'http://localhost:55555/images/sample.png',
+    'image': 'https://nameless-fortress-64042.herokuapp.com/images/sample.png',
     'arrivingTime': '08:30'
   },
   {
@@ -26,7 +26,7 @@ const kindergartens = [
     'webUrl': 'https://site.xxxx.com',
     'fbUrl': 'https://facebook.xxxx.com',
     'planCd': 1,
-    'image': 'http://localhost:55555/images/sample.png',
+    'image': 'https://nameless-fortress-64042.herokuapp.com/images/sample.png',
     'arrivingTime': '08:30'
   }
 

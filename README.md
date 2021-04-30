@@ -27,16 +27,16 @@ node .\server.js
 ## 使用例
 - ユーザ一覧を取得するGETメソッドのAPIを叩く場合は以下のURLを使用します
 ```
-http://localhost:55555/api/users/
+https://nameless-fortress-64042.herokuapp.com/api/users/
 ```
 - 該当年月の登園状況一覧を取得するクエリパラメータ付きのGETメソッドのAPIを叩く場合は以下のURLを使用します
   - 以下の例では2020-10-05の登園状況一覧を問い合わせています
 ```
-http://localhost:55555/api/attendances/search?date=2020-10-05
+https://nameless-fortress-64042.herokuapp.com/api/attendances/search?date=2020-10-05
 ```
 - アカウント登録をするPOSTメソッドのAPIを叩く場合は以下のURLを使用します
 ```
-http://localhost:55555/api/users/
+https://nameless-fortress-64042.herokuapp.com/api/users/
 
 // POSTするデータは以下のようなJsonデータ
 // ヘッダー
@@ -82,14 +82,14 @@ http://localhost:55555/api/users/
 - 配信可能な画像ファイルはpublic/imagesに保存されている画像のみです
 - 以下のようにしてアクセス可能です
 ```
-http://localhost:55555/images/sample.png
+https://nameless-fortress-64042.herokuapp.com/images/sample.png
 ```
 
 ## 画像ファイルのアップロード
 - 画像ファイルをアップロードすることで、アップロードした画像を配信可能にすることができます
 - 例えば、userのアイコン画像をアップロードする場合は以下のアドレスに画像をPOSTします
 ```
-http://localhost:55555/api/users/upload/image
+https://nameless-fortress-64042.herokuapp.com/api/users/upload/image
 ```
 - アップロードする際、画像のKey名はimageとしてください
 - アップロードされた画像はpublic/images/uploadedImagesに保存されます
