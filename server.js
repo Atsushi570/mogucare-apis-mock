@@ -109,7 +109,7 @@ function main() {
 
   // json serverを起動する
   server.use(router)
-  server.listen(5000, function () {
+  server.listen(process.env.PORT || 5000, function () {
     console.log('JSON Server is running')
   })
 }
