@@ -18,5 +18,6 @@ module.exports = {
     "rules": {
         "semi": ["error", "never"],
         "no-undef": 0,
-    }
+    },
+    parser: "@babel/eslint-parser",
 };

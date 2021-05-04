@@ -8,7 +8,7 @@
 - 本番環境の仕様は[こちら](https://docs.google.com/spreadsheets/d/13aXsdJyrVBww7QjiDB8PCJz8xeOzxsJcHoaz9Mukwy0/edit#gid=1849188503)を参照してください
 
 ## 環境
-- Node 11.13.0 で動作が確認できています
+- Node 11.13.0 と 14.15.5 で動作が確認できています
 
 ## サーバ起動方法
 - 使用前にパッケージのインストールを行ってください
@@ -27,16 +27,16 @@ node .\server.js
 ## 使用例
 - ユーザ一覧を取得するGETメソッドのAPIを叩く場合は以下のURLを使用します
 ```
-https://nameless-fortress-64042.herokuapp.com/api/users/
+http://localhost:55555/api/users/
 ```
 - 該当年月の登園状況一覧を取得するクエリパラメータ付きのGETメソッドのAPIを叩く場合は以下のURLを使用します
   - 以下の例では2020-10-05の登園状況一覧を問い合わせています
 ```
-https://nameless-fortress-64042.herokuapp.com/api/attendances/search?date=2020-10-05
+http://localhost:55555/api/attendances?date=2020-10-05
 ```
 - アカウント登録をするPOSTメソッドのAPIを叩く場合は以下のURLを使用します
 ```
-https://nameless-fortress-64042.herokuapp.com/api/users/
+http://localhost:55555/api/users/
 
 // POSTするデータは以下のようなJsonデータ
 // ヘッダー
@@ -64,7 +64,7 @@ https://nameless-fortress-64042.herokuapp.com/api/users/
 ```
 
 - 起動したことを確認するだけであればChromeなどでGETメソッドのAPIを叩いてみてください
-- POSTメソッドのAPIの動作確認をする場合は[post man](https://qiita.com/zaburo/items/16ac4189d0d1c35e26d1)などを使うと簡単と思います
+- POSTメソッドのAPIの動作確認をする場合は[post man](https://qiita.com/zaburo/items/16ac4189d0d1c35e26d1)などを使うと簡単です
 
 ## Nuxtアプリからの使用
 - NuxtアプリからAPIを叩く場合はaxiosとvuexが良い感じに処理してくれるので、上記のURLを意識する必要はありません
@@ -82,14 +82,14 @@ https://nameless-fortress-64042.herokuapp.com/api/users/
 - 配信可能な画像ファイルはpublic/imagesに保存されている画像のみです
 - 以下のようにしてアクセス可能です
 ```
-https://nameless-fortress-64042.herokuapp.com/images/sample.png
+http://localhost:55555/images/sample.png
 ```
 
 ## 画像ファイルのアップロード
 - 画像ファイルをアップロードすることで、アップロードした画像を配信可能にすることができます
 - 例えば、userのアイコン画像をアップロードする場合は以下のアドレスに画像をPOSTします
 ```
-https://nameless-fortress-64042.herokuapp.com/api/users/upload/image
+http://localhost:55555/api/users/image?user-id=アップロードする対象ユーザのuserId
 ```
 - アップロードする際、画像のKey名はimageとしてください
 - アップロードされた画像はpublic/images/uploadedImagesに保存されます
@@ -105,3 +105,4 @@ https://nameless-fortress-64042.herokuapp.com/api/users/upload/image
   - アプリ側ではuser_idなどテーブル仕様に記載されているカラムのデータのみ利用するようにしてください
   - （または、誰か直してください。。）
   - サーチクエリを使用した場合は、API仕様に従って、idを消去してレスポンスデータを返却します
+

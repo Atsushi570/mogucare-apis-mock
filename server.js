@@ -42,6 +42,7 @@ function main() {
   constants.healthTables.forEach(table => {
     handlers.addSearchQuery(server, table, ['date', 'user-id'], { kindergartenIdQuery: { tableName: 'settings', key: 'userId' }, yearMonthQueryKey: 'date' })
   })
+  handlers.addSearchQuery(server, 'images', ['relation-id', 'relation-type'])
   handlers.addSearchQuery(server, 'kindergartenFee', ['kindergarten-id'])
   handlers.addSearchQuery(server, 'kindergartens', [])
   handlers.addSearchQuery(server, 'masterAllergies', [])
@@ -56,8 +57,10 @@ function main() {
   // 健康関連のテーブルのサーチクエリ以外のAPIを定義する
   handlers.addHealthHandler(server, constants.healthTables)
 
-  // imagesのサーチクエリ以外のAPIを定義する
-  handlers.addImageUploadPost(server, router, 'images')
+  // 画像アップロード用のAPIを定義する
+  handlers.addImageUpload(server, router, 'users')
+  handlers.addImageUpload(server, router, 'kindergartens')
+  handlers.addImageUpload(server, router, 'images')
 
   // postとputでid以外の名前もPKと同等に扱るようにする
   handlers.handleRegularRequests(server, router, 'allergies', 'allergy', 'allergyId', true)
@@ -70,6 +73,7 @@ function main() {
   })
   handlers.handleRegularRequests(server, router, 'events', 'event', 'eventId', true)
   handlers.handleRegularRequests(server, router, 'follows', 'follow', 'followId', true)
+  handlers.handleRegularRequests(server, router, 'images', 'image', 'id', true)
   handlers.handleRegularRequests(server, router, 'kindergartenFee', 'kindergartenFee', 'kindergartenFeeId', true)
   handlers.handleRegularRequests(server, router, 'kindergartens', 'kindergarten', 'kindergartenId', true)
   handlers.handleRegularRequests(server, router, 'masterAllergies', 'masterAllergy', 'allergyId', true)

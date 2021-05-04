@@ -13,6 +13,22 @@ content-type: application/json
   "name": "sample"
 }
 
+### 画像の追加
+
+POST http://{{host}}:{{port}}/{{resource}}/image?kindergarten-id={{id}} HTTP/1.1
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="text"
+
+title
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="image"; filename="sample.png"
+Content-Type: image/png
+
+< ./sample.png
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
+
 ### 全データ取得
 
 GET http://{{host}}:{{port}}/{{resource}}/ HTTP/1.1

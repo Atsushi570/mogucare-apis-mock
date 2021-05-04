@@ -1,10 +1,10 @@
 @resource = images
 @host = localhost
 @port = 55555
-@id = 1
+@id = 22
 @relationType = 1
-@relationId = 1
-@queryStrings = kindergarten-id=kinder1&relation-type=1
+@relationId = post002
+@queryStrings = relation-type=1&relation-id=post002
 
 
 ### データの追加
@@ -25,7 +25,7 @@ Content-Type: image/png
 
 ### クエリパラメータを使った特定データ取得の取得
 
-GET http://{{host}}:{{port}}/{{resource}}/search?{{queryStrings}} HTTP/1.1
+GET http://{{host}}:{{port}}/{{resource}}?{{queryStrings}} HTTP/1.1
 
 ### 特定idのデータを削除
 
