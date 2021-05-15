@@ -51,6 +51,7 @@ function main() {
   handlers.addSearchQuery(server, 'positions', ['kindergarten-id'])
   handlers.addSearchQuery(server, 'posts', ['date', 'kindergarten-id'], { yearMonthQueryKey: 'datetime' })
   handlers.addSearchQuery(server, 'settings', ['user-id', 'kindergarten-id', 'class-id', 'position-id'], { removeId: true })
+  handlers.addSearchQuery(server, 'symptoms', ['condition-id'], { removeId: true })
   handlers.addSearchQuery(server, 'users', ['mogu-id'], { kindergartenIdQuery: { tableName: 'settings', key: 'userId' }, removeId: true })
   handlers.addSearchQuery(server, 'vaccinations', ['user-id'], { removeId: true })
 
@@ -82,6 +83,7 @@ function main() {
   handlers.handleRegularRequests(server, router, 'positions', 'position', 'positionId', true)
   handlers.handleRegularRequests(server, router, 'posts', 'post', 'postId', true)
   handlers.handleRegularRequests(server, router, 'settings', 'setting', 'settingId', true)
+  handlers.handleRegularRequests(server, router, 'symptoms', 'symptom', 'symptomId', true)
   handlers.handleRegularRequests(server, router, 'users', 'user', 'userId', true)
   handlers.handleRegularRequests(server, router, 'vaccinations', 'vaccination', 'vaccinationId', true)
 
@@ -113,7 +115,7 @@ function main() {
 
   // json serverを起動する
   server.use(router)
-  server.listen(process.env.PORT || 5000, function () {
+  server.listen(55555, function () {
     console.log('JSON Server is running')
   })
 }

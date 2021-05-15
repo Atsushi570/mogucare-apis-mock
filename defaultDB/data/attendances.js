@@ -82,7 +82,18 @@ const attendances = [
     'comeHomeTime': '14:25:07',
     'lateTime': null,
     'memo': '表示月の前月のテストデータ。月によっては動かないかも。'
-  }
+  },
+  {
+    'id':'attendance008',
+    'attendanceId': 'attendance008',
+    'userId': 'user005',
+    'kindergartenId': 'kinder1',
+    'attendanceCd': 4,
+    'attendanceDate': `${year}-${month}-${day}`,
+    'comeHomeTime': '12:40:07',
+    'lateTime': '10:25:07',
+    'memo': '遅刻後に降園した。'
+  },
 ]
 
 module.exports = attendances

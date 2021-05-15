@@ -13,7 +13,6 @@ const conditions = [
     'conditionId': 'condition001',
     'userId': 'user005',
     'conditionCd': 1,
-    'symptomCd': null,
     'memo': 'conditionCd 1',
     'date': `${year}-${month}-${day}`
   },
@@ -22,7 +21,6 @@ const conditions = [
     'conditionId': 'condition002',
     'userId': 'user006',
     'conditionCd': 2,
-    'symptomCd': null,
     'memo': 'conditionCd 2',
     'date': `${year}-${month}-${day}`
   },
@@ -31,7 +29,6 @@ const conditions = [
     'conditionId': 'condition003',
     'userId': 'user007',
     'conditionCd': 3,
-    'symptomCd': 1,
     'memo': 'conditionCd 3, symptomCd: 1',
     'date': `${year}-${month}-${day}`
   },
@@ -40,7 +37,6 @@ const conditions = [
     'conditionId': 'condition004',
     'userId': 'user008',
     'conditionCd': 3,
-    'symptomCd': 2,
     'memo': 'conditionCd 3, symptomCd: 2',
     'date': `${year}-${month}-${day}`
   },
@@ -49,7 +45,6 @@ const conditions = [
     'conditionId': 'condition005',
     'userId': 'user014',
     'conditionCd': 3,
-    'symptomCd': 2,
     'memo': 'conditionCd 3, symptomCd: 2',
     'date': `${year}-${month}-${day}`
   },
@@ -58,7 +53,6 @@ const conditions = [
     'conditionId': 'condition006',
     'userId': 'user009',
     'conditionCd': 3,
-    'symptomCd': 3,
     'memo': 'conditionCd 3, symptomCd: 3',
     'date': `${year}-${month}-${day}`
   },
@@ -67,7 +61,6 @@ const conditions = [
     'conditionId': 'condition007',
     'userId': 'user010',
     'conditionCd': 3,
-    'symptomCd': 4,
     'memo': 'conditionCd 3, symptomCd: 4',
     'date': `${year}-${month}-${day}`
   },
@@ -76,7 +69,6 @@ const conditions = [
     'conditionId': 'condition008',
     'userId': 'user005',
     'conditionCd': 1,
-    'symptomCd': null,
     'memo': '',
     'date': `${year}-${monthBefore}-${dayBefore}`
   },
@@ -85,7 +77,6 @@ const conditions = [
     'conditionId': 'condition009',
     'userId': 'user005',
     'conditionCd': 3,
-    'symptomCd': 7,
     'memo': 'conditionCd 3, symptomCd: 7',
     'date': `${year}-${month}-${dayBefore}`
   },
@@ -94,7 +85,6 @@ const conditions = [
     'conditionId': 'condition010',
     'userId': 'user011',
     'conditionCd': 3,
-    'symptomCd': 5,
     'memo': 'conditionCd 3, symptomCd: 5',
     'date': `${year}-${month}-${day}`
   },
@@ -103,7 +93,6 @@ const conditions = [
     'conditionId': 'condition011',
     'userId': 'user012',
     'conditionCd': 3,
-    'symptomCd': 6,
     'memo': 'conditionCd 3, symptomCd: 6',
     'date': `${year}-${month}-${day}`
   },

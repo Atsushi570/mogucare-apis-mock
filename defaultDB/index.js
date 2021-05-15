@@ -19,6 +19,7 @@ const classrooms = require('./data/classrooms')
 const positions = require('./data/positions')
 const foods = require('./data/foods')
 const sleeps = require('./data/sleeps')
+const symptoms = require('./data/symptoms')
 const defecations = require('./data/defecations')
 const images = require('./data/images')
 
@@ -44,6 +45,7 @@ const db = {
   positions,
   foods,
   sleeps,
+  symptoms,
   defecations,
   images
 }
