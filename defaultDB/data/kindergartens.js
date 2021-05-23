@@ -20,7 +20,7 @@ const kindergartens = [
     'mogucareId': 'mogucare2',
     'userId': 'user001',
     'kindergartenName': 'test kindergarten2',
-    'phone': 'xxx-xxxxx-xxxx',
+    'phone': 'xxx-xxxxx-oooo',
     'email': 'test@example.com',
     'address': 'Chiba',
     'webUrl': 'https://site.xxxx.com',
