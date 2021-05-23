@@ -3,14 +3,14 @@ name: CI
 # トリガーの設定
 on:
   push:
-    branches: [develop]
+    branches: [master]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     
     steps:
-      # developブランチをチェックアウト
+      # masterブランチをチェックアウト
       - uses: actions/checkout@v2
       - name: Deploy
         env:
@@ -19,5 +19,5 @@ jobs:
           HOST_NAME: ${{ secrets.HOST_NAME }}
         run : |
           echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
-          ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOST_NAME} 'cd /mogucare-apis-mock/ &&　git pull origin develop'
+          ssh -o StrictHostKeyChecking=no -i private_key ${USER_NAME}@${HOST_NAME} 'cd /mogucare-apis-mock/ &&　git pull origin master'
 
