@@ -24,4 +24,6 @@ jobs:
           eval `ssh-agent` &&
           ssh-add ~/.ssh/github_key &&
           git pull origin master
+          npm i &&
+          npm start
           '
