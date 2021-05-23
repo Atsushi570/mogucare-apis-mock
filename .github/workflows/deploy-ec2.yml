@@ -19,5 +19,5 @@ jobs:
           HOST_NAME: ${{ secrets.HOST_NAME }}
         run : |
           echo "$PRIVATE_KEY" > private_key && chmod 600 private_key
-          ssh -o StrictHostKeyChecking=no -i private_key ec2-user@${HOST_NAME} 'cd mogucare-apis-mock/ &&　git pull origin master'
+          ssh -o StrictHostKeyChecking=no -i private_key ec2-user@${HOST_NAME} 'sudo yum install git -y && cd mogucare-apis-mock/ &&　git pull origin master'
 
